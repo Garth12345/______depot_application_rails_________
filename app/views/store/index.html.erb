@@ -20,7 +20,7 @@
         <td><%= strip_tags(product.description) %></td>
         <td><%= image_tag(product.image_url) %></td>
         <td><%= number_to_currency(product.price) %>
-        <%= button_to 'Add to Cart', line_items_path(product_id: product) %> </td>
+        <%= button_to 'Add to Cart', line_items_path(product_id: product),class:"w3-button w3-light-blue" %> </td>
       </tr>
       
     <% end %>
