@@ -1,0 +1,40 @@
+<p id="notice" class="w3-panel"><%= notice %></p>
+
+<div class="w3-panel w3-aqua">
+
+<table class="w3-table-all">
+<thead>
+  <tr>
+    <th><h1>cart</h1></th>
+    <th><ul>
+	  <% @cart.line_items.each do |item| %>
+	    <li><%= item.product.title %></li>
+	  <% end %>
+	</ul>
+	<ul>
+	  <% @cart.line_items.each do |item| %>
+	    <li><%= item.product.price %></li>
+	  <% end %>
+	</ul>
+	<ul>
+	  <% @cart.line_items.each do |item| %>
+	    <li><%= item.product.image_url %></li>
+	  <% end %>
+	</ul>
+	
+	</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+
+
+<tr>
+<td>
+<%= link_to 'Edit', edit_cart_path(@cart) ,class:"w3-button w3-light-gray" %> |
+<%= link_to 'Back', carts_path , class:"w3-button w3-light-gray" %>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
